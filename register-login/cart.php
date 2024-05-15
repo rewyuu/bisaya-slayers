@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION["user"])) {
-   header("Location: login.php");
-   exit;
+    header("Location: login.php");
+    exit;
 }
 ?>
 
@@ -100,7 +100,7 @@ if (!isset($_SESSION["user"])) {
         <div class="payment-method">
             <label for="payment-type">Payment Method</label>
             <select id="payment-type">
-                <option value="cod">Cash on Delivery</option>
+                <option value="Cash on Delivery">Cash on Delivery</option>
                 <option value="gcash">GCash</option>
                 <option value="credit-card">Credit Card</option>
             </select>
@@ -189,7 +189,7 @@ if (!isset($_SESSION["user"])) {
                     localStorage.removeItem('cartItems');
                     localStorage.removeItem('cartItemCount');
                     displayCartItems();
-                    window.location.href = "index.php";
+                    window.location.href = "orders.php";
                 } else {
                     alert('There was an error submitting your order. Please try again.');
                 }
