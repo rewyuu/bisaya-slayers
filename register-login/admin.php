@@ -12,9 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_SESSION["orders"][$orderIndex])) {
         if ($action == 'accept') {
-            $_SESSION["orders"][$orderIndex]['status'] = 'accepted';
+            $_SESSION["orders"][$orderIndex]['status'] = 'Accepted';
         } elseif ($action == 'decline') {
-            $_SESSION["orders"][$orderIndex]['status'] = 'declined';
+            $_SESSION["orders"][$orderIndex]['status'] = 'Declined';
         }
     }
 }
@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             foreach ($_SESSION["orders"] as $index => $order) {
                 echo "<div class='order-item'>";
                 echo "<p>Order by: {$order['user']}<br>Address: {$order['address']}<br>Payment: {$order['paymentType']}<br>Status: {$order['status']}</p>";
-                if ($order['status'] == 'pending') {
+                if ($order['status'] == 'Pending') {
                     echo "<form method='POST'>
                             <input type='hidden' name='orderIndex' value='{$index}'>
                             <button type='submit' name='action' value='accept'>Accept</button>
