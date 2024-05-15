@@ -92,7 +92,6 @@ if (!isset($_SESSION["user"])) {
   }
 
   function redirectToLogout() {
-
     localStorage.removeItem('cartItemCount');
     localStorage.removeItem('cartItems');
     window.location.href = "logout.php"; 
