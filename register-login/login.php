@@ -90,6 +90,23 @@ if (isset($_SESSION["user"])) {
         #loginButton {
             font-weight: 700;
         }
+
+        .go-back-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 28%;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            border-radius: 10px;
+            color: white;
+        }
+        .go-back-button:hover {
+                    background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -144,6 +161,14 @@ if (isset($_SESSION["user"])) {
         </div>
       </form>
      <div class="registered"><p>Not registered yet ? <a href="registration.php">Register Here</a></p></div>
+
+     <div class="go-back-button">
+        <button class="btn btn-hover" onclick="redirectHome()">Go Back Home</button>
+            <script>
+              function redirectHome() {
+                  window.location.href = "../index.html";
+              }
+          </script>
     </div>
 
     <script>    
