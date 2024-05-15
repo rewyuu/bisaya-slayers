@@ -140,6 +140,23 @@ body {
     font-weight: 700;
 }
 
+.go-back-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 28%;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            border-radius: 10px;
+            color: white;
+        }
+.go-back-button:hover {
+            background-color: #0056b3;
+}
+
     </style>
 </head>
 <body>
@@ -182,6 +199,15 @@ body {
         </form>
         <div class="registered">
             <p>Already Registered ?  <a href="login.php"> Click me to Log in</a></p>
+        </div>
+
+        <div class="go-back-button">
+        <button class="btn btn-hover" onclick="redirectHome()">Go Back Home</button>
+            <script>
+              function redirectHome() {
+                  window.location.href = "../index.html";
+              }
+          </script>
         </div>
     </div>
 
